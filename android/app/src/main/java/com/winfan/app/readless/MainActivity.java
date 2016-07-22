@@ -1,4 +1,4 @@
-package com.readless;
+package com.winfan.app.readless;
 
 import com.facebook.react.ReactActivity;
 
