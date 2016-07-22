@@ -16,6 +16,7 @@
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:theme="@style/AppTheme">
+
       <activity
         android:name="com.winfan.app.readless.MainActivity"
         android:label="@string/app_name"
@@ -26,6 +27,18 @@
         </intent-filter>
       </activity>
       <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+        <!-- Facebook -->
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:label="@string/app_name" />
+        <!-- 下面authorities后面那串数字是facebookId -->
+        <provider android:authorities="com.facebook.app.FacebookContentProvider304397496561568"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
     </application>
 
 </manifest>

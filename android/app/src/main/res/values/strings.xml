@@ -1,3 +1,6 @@
 <resources>
+
+
     <string name="app_name">ReadLess</string>
+    <string name="facebook_app_id">304397496561568</string>
 </resources>
