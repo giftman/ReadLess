@@ -23,8 +23,8 @@
  */
 'use strict';
 
-const React = require('react-native');
-const {StyleSheet} = React;
+const React = require('react');
+const {StyleSheet} = require('react-native');
 const F8Button = require('./F8Button');
 
 const { logInWithFacebook } = require('../actions');
@@ -108,7 +108,7 @@ async function timeout(ms: number): Promise {
 var styles = StyleSheet.create({
   button: {
     alignSelf: 'center',
-    width: 270,
+    width: 200,
   },
 });
 

@@ -99,8 +99,8 @@ class Home extends React.Component {
     //   )
     // };
     var images = [];
-    console.log('HomeRender');
-    console.log(this.state.userCatagory);
+    // console.log('HomeRender');
+    // console.log(this.state.userCatagory);
     if(this.props.catagory){
       for (var i = 0; i < this.state.userCatagory.length; i++) {
         images.push(

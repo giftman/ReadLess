@@ -27,9 +27,11 @@
 const parseActions = require('./leancloud');
 const navigationActions = require('./navigation');
 const filterActions = require('./filter');
+const loginActions = require('./login');
 
 module.exports = {
   ...filterActions,
   ...parseActions,
   ...navigationActions,
+  ...loginActions,
 };

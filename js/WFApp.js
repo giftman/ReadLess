@@ -45,8 +45,9 @@ var WFApp = React.createClass({
     // for (let typeId of this.props.userCatagory){
     
     // }
-    this.props.dispatch(loadCatagory());
+    
 		this.props.dispatch(loadArticles());
+    this.props.dispatch(loadCatagory());
     // CodePush.sync();
   },
 

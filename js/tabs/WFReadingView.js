@@ -41,6 +41,8 @@ var ReadingInfo = require('./reading/ReadingInfo')
 var { switchReadingTab} = require('../actions');
 var { connect } = require('react-redux');
 
+var LoginButton = require('../common/LoginButton');
+
 import type {Tab} from '../reducers/navigation';
 
 class WFReadingView extends React.Component {
@@ -102,6 +104,14 @@ class WFReadingView extends React.Component {
       selectedIcon={require('./info/img/info-icon-active.png')}
       onPress={this.onTabSelect.bind(this,'info')}
       />
+
+      <View style={styles.loginPrompt}>
+          <Text style={styles.loginText}>
+            Log in to find your friends at F8.
+          </Text>
+          <LoginButton source="Drawer" />
+        </View>
+
       </View>
   )
   }

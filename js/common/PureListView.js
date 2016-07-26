@@ -71,7 +71,7 @@ class PureListView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps: Props) {
-    console.log('PureListView componentWillReceiveProps');
+    // console.log('PureListView componentWillReceiveProps');
     if (this.props.data !== nextProps.data) {
       this.setState({
         dataSource: cloneWithData(this.state.dataSource, nextProps.data),
@@ -80,7 +80,7 @@ class PureListView extends React.Component {
   }
 
   render() {
-    console.log('PureListView render');
+    // console.log('PureListView render');
     const {contentInset} = this.props;
     const bottom = contentInset.bottom +
       Math.max(0, this.props.minContentHeight - this.state.contentHeight);

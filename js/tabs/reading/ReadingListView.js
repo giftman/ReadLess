@@ -53,8 +53,8 @@ class ReadingListView extends React.Component {
   }
 
   componentWillReceiveProps(nextProps: Props) {
-    console.log('ReadingListView');
-    console.log(nextProps.typeId);
+    // console.log('ReadingListView');
+    // console.log(nextProps.typeId);
     if (nextProps.articles !== this.props.articles ||
         nextProps.typeId !== this.props.typeId) {
       this.setState({
@@ -65,7 +65,7 @@ class ReadingListView extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.log('componentWillUpdate');
+    // console.log('componentWillUpdate');
     // if (this.state.typeId !== nextState.typeId) {
     //   this.setState({
     //      typeId: nextState.typeId,
@@ -79,8 +79,8 @@ class ReadingListView extends React.Component {
 // }
 
   render() {
-    console.log('ReadingListView render');
-    console.log(this.state.articles[0]);
+    // console.log('ReadingListView render');
+    // console.log(this.state.articles[0]);
     return (
       <PureListView
         ref={this.storeInnerRef}

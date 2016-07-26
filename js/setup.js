@@ -25,6 +25,7 @@
 'use strict';
 
 var WFApp = require('./WFApp');
+var FacebookSDk = require('./FacebookSDK');
 import React from 'react';
 
 var { Provider } = require('react-redux');
@@ -35,6 +36,8 @@ import {APP_ID,APP_KEY,version,channel} from './env';
 class Root extends React.Component {
     constructor() {
       super();
+
+      FacebookSDk.init();
       AV.init({
         appId: APP_ID,
         appKey: APP_KEY
