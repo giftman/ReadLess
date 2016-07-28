@@ -41,11 +41,11 @@ import type { Action, ThunkAction } from './types';
 //   });
 // }
 
-async function AVFacebookLogin(...args): Promise {
+async function AVFacebookLogin(_auth): Promise {
   return new Promise((resolve, reject) => {
-    AV.User.signUpOrlogInWithAuthData(...args,{
+    AV.User.signUpOrlogInWithAuthData(autho,{
       success: resolve,
-      error: (user, error) => reject(error && error.error || error),
+      error: (error) => reject(error && error.error || error),
     });
   });
 }
@@ -68,7 +68,7 @@ async function _logInWithFacebook(source: ?string): Promise<Array<Action>> {
     FacebookSDK.login((response) => {
       if(response && !response.error){
         // resolve(response);
-        resolve();
+        resolve(AVFacebookLogin({'facebook':{'uid':response.userID,'access_token':response.accessToken}}));
       }else{
         reject(response && response.error);
       }
@@ -84,7 +84,7 @@ function logInWithFacebook(source: ?string): ThunkAction {
       (result) => {
       dispatch(result);
       }
-    );
+    ).catch((error) => console.log(error));
     return login;
   };
 }

@@ -33,7 +33,7 @@ var {
   GraphRequest,
   GraphRequestManager,
 } = require('react-native-fbsdk');
-const AV = require('leancloud-storage');
+// const AV = require('leancloud-storage');
 
 const emptyFunction = () => {};
 const mapObject = require('fbjs/lib/mapObject');
@@ -67,10 +67,10 @@ async function loginWithFacebookSDK(options: LoginOptions): Promise<AuthResponse
     accessToken: accessToken.accessToken,
     expiresIn: Math.round((accessToken.expirationTime - Date.now()) / 1000),
   };
-  const avLogin = await AV.User.signUpOrlogInWithAuthData({'facebook':{'uid':_authResponse.userID,'access_token':_authResponse.accessToken}});
-  if (avLogin && avLogin.error) {
-    console.log('avLogin error');
-  }
+  // const avLogin = await AV.User.signUpOrlogInWithAuthData({'facebook':{'uid':_authResponse.userID,'access_token':_authResponse.accessToken}});
+  // if (avLogin && avLogin.error) {
+  //   console.log('avLogin error');
+  // }
   return _authResponse;
 }
 

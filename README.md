@@ -1,6 +1,7 @@
 # ReadLess
 
 # ToDoList
- * ios facebook
- * weixin
- * clean 
+- [x] ios **facebook** @leancloud has bug  #change to weixin
+
+* weixin
+* clean 
